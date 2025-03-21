@@ -67,4 +67,14 @@ if res.status_code ==200:
     print(res.json())
 else:
     print("Error",res.status_code)
+
+#DELETE
+#Delete the existing resource 
+res=req.delete(url="https://reqres.in/api/users/2")
+if res.status_code == 204:
+    print("Delete is done")
+    #print(res.json()) # it will through error bcs data is deleted
+else:
+    print("Error",res.status_code)
+
     
